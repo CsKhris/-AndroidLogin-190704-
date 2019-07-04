@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+	<!-- Login을 위한 SQL -->
+	<select id="login" parameterType="com.android.login.domain.Member" resultType="com.android.login.domain.Member" >
+	select *
+	from androidmember
+	where upper(id)=#{id} and trim(pw)=#{pw}
+	</select>
+
+</mapper>
